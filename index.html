@@ -9,43 +9,60 @@
   <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/bootstrap/bootstrap.js" defer></script>
+  <script src="assets/js/jquery-3.5.1.js"></script>
+  <script src="assets/js/jquery.dataTables.min.js"></script>
+  <script src="assets/js/script.js"></script>
 </head>
 
 <body>
   <div class="container py-4">
     <h1 class="text-center mb-5">Contact Us</h1>
     <div class="form-container">
-      <form action="">
+      <form action="" id="contact_us" method="post">
         <div class="col-12 mb-3">
           <select name="contact_about" class="form-select" id="contact_about">
-            <option selected>Contacting us about...</option>+
-            <option>Become partner</option>
-            <option>Tech Support</option>
-            <option>Careers</option>
-            <option>Developers</option>
-            <option>Sales</option>
-            <option>Current Clients</option>
-            <option>Press</option>
-            <option>Media</option>
-            <option>Other</option>
+            <option selected value="Contacting us about">Contacting us about...</option>
+            <option value="Become partner">Become partner</option>
+            <option value="Tech Support">Tech Support</option>
+            <option value="Careers">Careers</option>
+            <option value="Developers">Developers</option>
+            <option value="Sales">Sales</option>
+            <option value="Current Clients">Current Clients</option>
+            <option value="Press">Press</option>
+            <option value="Media">Media</option>
+            <option value="Other">Other</option>
           </select>
+          <span class="contact_about_error text-danger"></span>
         </div>
 
-        <div class="row">
+        <div class="row mb-3">
           <div class="col-lg-6">
             <input type="text" name="name" id="name" class="form-control" placeholder="Your name">
+            <span class="name_error text-danger"></span>
           </div>
           <div class="col-lg-6">
             <input type="email" name="email" id="email" class="form-control" placeholder="Work Email address">
+            <span class="email_error text-danger"></span>
           </div>
         </div>
-        <div class="row">
+        <div class="row mb-3">
           <div class="col-lg-6">
-            <input type="text" name="name" id="name" class="form-control" placeholder="Your name">
+            <input type="text" class="form-control" type="number" name="mobile" id="mobile" placeholder="Mobile">
+            <span class="mobile_error text-danger"></span>
           </div>
           <div class="col-lg-6">
-            <input type="email" name="email" id="email" class="form-control" placeholder="Work Email address">
+            <input type="text" class="form-control" type="text" name="company" id="company" placeholder="Company">
           </div>
+        </div>
+        <div class="col-12 mb-3">
+          <textarea name="message" placeholder="Type your message..." class="form-control" id="message" cols="30"
+          rows="10"></textarea>
+          <span class="message_error text-danger"></span>
+        </div>
+        <div class="form-actions">
+          <button type="submit" id="submit" class="btn bg-success text-white px-5 py-2">
+            Send
+          </button>
         </div>
       </form>
     </div>
