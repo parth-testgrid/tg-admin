@@ -18,7 +18,7 @@
   <div class="container py-4">
     <h1 class="text-center mb-5">Contact Us</h1>
     <div class="form-container">
-      <form action="" id="contact_us" method="post">
+      <form action="" id="contact_us" method="post" enctype="multipart/form-data">
         <div class="col-12 mb-3">
           <select name="contact_about" class="form-select" id="contact_about">
             <option selected value="Contacting us about">Contacting us about...</option>
@@ -63,7 +63,7 @@
           
         </div>
         <div class="form-actions">
-          <button type="submit" id="submit" class="btn bg-success text-white px-5 py-2">
+          <button type="submit" id="submit" name="submit" class="btn bg-success text-white px-5 py-2">
             Send
           </button>
         </div>

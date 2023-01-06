@@ -39,6 +39,7 @@ $(document).ready(function () {
   }
 
   const contact_us_reason = $("#contact_about").val();
+
   $("#contact_about").change(function (e) {
     e.preventDefault();
 
@@ -47,7 +48,7 @@ $(document).ready(function () {
       <div class="form-group">
         <label class="form-control-label">Resume/CV</label>
         <div>
-          <input type="file" name="resume_file" id="resume" class="form-control"
+          <input type="file" name="resume" id="resume" class="form-control"
             data-multiple-caption="{count} files selected">
           <label for="">
             <span class="">Attach your file</span>
@@ -75,10 +76,10 @@ $(document).ready(function () {
     }
   });
 
-  $("#submit").click(function (e) {
+  $("#contact_us").submit(function (e) {
     e.preventDefault();
-
-    if (contact_us_reason == "Contacting us about" || contact_us_reason == '') {
+    console.log(e);
+    if (contact_us_reason == "Contacting us about" || contact_us_reason == "") {
       $(".contact_about_error").html("Please select a reason");
     } else {
       $(".contact_about_error").html("");
@@ -106,7 +107,7 @@ $(document).ready(function () {
     }
 
     const message = $("#message").val();
-    if (!isMobileValid(message)) {
+    if (message == "") {
       $(".message_error").html("Please enter a message");
     } else {
       $(".message_error").html("");
@@ -139,7 +140,9 @@ $(document).ready(function () {
     }
 
     if ($("#resume").length && $("#cover_letter").length) {
-      let formData = new FormData(form);
+      const form = $("#contact_us");
+      console.log(form);
+      let formData = new FormData(this);
 
       $.ajax({
         type: "POST",
@@ -149,7 +152,7 @@ $(document).ready(function () {
         processData: false,
         cache: false,
         success: function (response) {
-          
+          console.log(response);
         }
       });
     }
@@ -159,7 +162,7 @@ $(document).ready(function () {
       url: "ajax/ajax_contact.php",
       data: $("#contact_us").serialize(),
       success: function (response) {
-
+        
       }
     });
   });
