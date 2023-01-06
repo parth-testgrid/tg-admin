@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background: transparent;
+}
+
+body {
+  background-color: #1B0541;
+}
+
+.login {
+  width: 100%;
+  margin: auto;
+  max-width: 560px;
+  background-color: #100425;
+  border-radius: 10px;
+}
+
+.green {
+  color: #17A689;
+}
+
+.login input {
+  background-color: #2A1E3D !important;
+
+}
+
+.login input::placeholder {
+  color: #FFFFFF;
+}
+
+.sign-in-btn {
+  background-color: #17A689;
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 10px;
+}

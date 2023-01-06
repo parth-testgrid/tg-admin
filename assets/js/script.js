@@ -79,7 +79,7 @@ $(document).ready(function () {
   $("#contact_us").submit(function (e) {
     e.preventDefault();
     console.log(e);
-    if (contact_us_reason == "Contacting us about" || contact_us_reason == "") {
+    if (contact_us_reason == "Contacting us about") {
       $(".contact_about_error").html("Please select a reason");
     } else {
       $(".contact_about_error").html("");
