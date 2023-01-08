@@ -2,8 +2,6 @@
 require_once "../config.php";
 
 if (isset($_POST["name"])) {
-  $uuid = guidv4();
-
   $error = true;
   // input fields
   $contact_about = trim($_POST["contact_about"]);
@@ -35,19 +33,8 @@ if (isset($_POST["name"])) {
   }
 
   $company = trim($_POST["company"]);
-  if (empty($company)) {
-    $error = true;
-  } else {
-    $error = false;
-  }
 
   $message = trim($_POST["message"]);
-  if (empty($message)) {
-    $error = true;
-  } else {
-    $error = false;
-  }
-
 
   if (!$error) {
     $insertQuery = "INSERT INTO tech_support (reason, name, email, mobile, company, message) VALUES ('$contact_about', '$name', '$email', $mobile, '$company', '$message')";

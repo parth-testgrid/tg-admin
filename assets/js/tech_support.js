@@ -20,11 +20,10 @@ $(document).ready(function () {
     }
   }
 
-  const contact_us_reason = $("#contact_about").attr('selected', true);
-
+  
   $("#tech_support").submit(function (e) {
     e.preventDefault();
-    console.log(contact_us_reason);
+    const contact_us_reason = $("#contact_about").val();
     if (contact_us_reason == "Contacting us about") {
       $(".contact_about_error").html("Please select a reason");
     } else {

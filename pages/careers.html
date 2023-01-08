@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.css">
+  <script src="../assets/js/bootstrap/bootstrap.js" defer></script>
+  <script src="../assets/js/jquery-3.5.1.js" defer></script>
+  <script src="../assets/js/jquery.dataTables.min.js" defer></script>
+  <script src="../assets/js/careers.js" defer></script>
+</head>
+
+<body>
+
+  <div class="container py-4">
+    <h1 class="text-center mb-5">Careers</h1>
+    <div class="form-container">
+      <form action="" id="careers" method="post" enctype="multipart/form-data">
+        <div class="row mb-3">
+          <div class="col-lg-6">
+            <input type="text" name="fname" id="fname" class="form-control" placeholder="First Name">
+            <span class="fname_error text-danger"></span>
+          </div>
+          <div class="col-lg-6">
+            <input type="text" name="lname" id="lname" class="form-control" placeholder="Last Name">
+            <span class="lname_error text-danger"></span>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-lg-6">
+            <input type="email" class="form-control" type="text" name="email" id="email" placeholder="Email">
+            <span class="email_error text-danger"></span>
+          </div>
+          <div class="col-lg-6">
+            <input type="text" class="form-control" name="linkedin" id="linkedin" placeholder="LinkedIn profile link">
+            <span class="linkedin_error text-danger"></span>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="form-control-label">Resume/CV</label>
+              <div>
+                <input type="file" name="resume" id="resume" class="form-control"
+                  data-multiple-caption="{count} files selected">
+                <label for="">
+                  <span class="">Attach your file</span>
+                </label>
+                <span class="resume_error text-danger"></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="form-control-label">Cover letter</label>
+              <div>
+                <input type="file" name="cover_letter" id="cover_letter" class="form-control"
+                  data-multiple-caption="{count} files selected">
+                <label for="">
+                  <span class="">Attach your file</span>
+                </label>
+                <span class="cover_letter_error text-danger"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" id="submit" name="submit" class="btn bg-success text-white px-5 py-2">
+            Submit your applications
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
